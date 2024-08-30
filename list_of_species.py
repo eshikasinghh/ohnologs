@@ -1,9 +1,28 @@
 import requests
 
-names = ["Chelonoidis_abingdonii", "Struthio_camelus_australis", "Gopherus_agassizii", "Mus_spretus", 
-                "Vicugna_pacos", "Marmota_marmota_marmota", "Poecilia_formosa", "Castor_canadensis", "Bison_bison_bison", "Ursus_americanus",
-                "Neovison_vison", "Colobus_angolensis_palliatus", "Camelus_dromedarius", "Urocitellus_parryii", "Salvator_merianae", "Dasypus_novemcinctus",
-                "Scleropages_formosus", "Ursus_thibetanus_thibetanus", "Gadus_morhua", "Gadus_morhua", "Clupea_harengus", "Salmo_salar",
+names = [
+"Chelonoidis_abingdonii", 
+"Struthio_camelus_australis", 
+"Gopherus_agassizii", 
+"Mus_spretus", 
+"Vicugna_pacos", 
+"Marmota_marmota_marmota", 
+"Poecilia_formosa", 
+"Castor_canadensis", 
+"Bison_bison_bison", 
+"Ursus_americanus",
+"Neovison_vison", 
+"Colobus_angolensis_palliatus", 
+"Camelus_dromedarius", 
+"Urocitellus_parryii", 
+"Salvator_merianae", 
+"Dasypus_novemcinctus",
+"Scleropages_formosus", 
+"Ursus_thibetanus_thibetanus", 
+"Gadus_morhua", 
+"Gadus_morhua", 
+"Clupea_harengus", 
+"Salmo_salar",
 "Salmo_salar_european_origin_alta",
 "Salmo_salar_north_american_atlantic_salmon",
 "Salmo_salar_north_american_origin_brian",
@@ -305,8 +324,8 @@ names = ["Chelonoidis_abingdonii", "Struthio_camelus_australis", "Gopherus_agass
 "Taeniopygia_guttata",
 "Maylandia_zebra",
 "Danio_rerio",
-"Mastacembelus_armatus"]
-
+"Mastacembelus_armatus"
+]
 
 search_term = "View karyotype"
 
@@ -315,7 +334,6 @@ for name in names:
     #print(url)
     response = requests.get(url)
 
-    if response.status_code != 200:
-        print(name)
-        # if search_term in response.text:
-        #     print(name)
+    if response.status_code == 200:
+        if search_term in response.text:
+            print(name)
