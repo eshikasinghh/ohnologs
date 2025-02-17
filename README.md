@@ -1,2 +1,2 @@
 # ohnologs
-Summer/Fall 2024: Computational Biology Intern @  Bakar Aging Research Institute
+Summer 2024 - Spring 2025: Computational Biology Intern @  Bakar Aging Research Institute
